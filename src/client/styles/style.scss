@@ -1,0 +1,675 @@
+body {
+    //background: #0b525b;
+    background-image: url(https://cdn.pixabay.com/photo/2015/07/11/23/02/plane-841441_1280.jpg);
+    color: #000;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#traveling {
+    text-align: center;
+    font-size: 22px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    font-family: cursive;
+    font-style: italic;
+}
+
+.WhyTravel {
+    font-size: 3em;
+    color: #14213d;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 50vw;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.form-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4rem;
+    margin-bottom: 0.7rem;
+    text-align: center;
+    font-size: 2em;
+    font-style: italic;
+    font-family: cursive;
+    color: #ff6d00;
+}
+
+input {
+    background: #ffffff;
+    color: #000;
+    font-size: 14px;
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    padding: 14px 11px;
+    font-style: oblique;
+    font-family: serif;
+    border: 5px solid black;
+}
+
+#input_from {
+    font-size: 20px;
+    font-style: italic;
+    font-family: fantasy;
+    color: #dddf00;
+}
+
+#input_to {
+    font-size: 20px;
+    font-style: italic;
+    font-family: fantasy;
+    color: #5e60ce;
+}
+
+#input_date {
+    font-size: 20px;
+    font-style: italic;
+    font-family: fantasy;
+    color: #1a4301;
+}
+
+.button_submit {
+    display: inline;
+    background: #ffffff;
+    color: #000;
+    font-size: 14px;
+    margin-top: 1.5rem;
+    width: 100px;
+    font-weight: bold;
+    font-style: oblique;
+    font-family: serif;
+    border: 5px solid black;
+    border-radius: 50px;
+    align-items: baseline;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 3px #999;
+}
+
+.button_submit:hover {
+    background: #d00000;
+    color: #000;
+}
+
+.MyResults {
+    font-size: 22px;
+    font-style: italic;
+    font-family: cursive;
+    //display: none;
+}
+
+.city-text-result {
+    color: #ffba08;
+}
+
+.date-text-result {
+    color: #00b4d8;
+}
+
+.days-text-result {
+    color: #9d0208;
+}
+
+.weather-text-result {
+    color: #70e000;
+}
+
+.button-print, .button-delete {
+    display: inline;
+    background: #ffffff;
+    color: #000;
+    font-size: 14px;
+    font-style: oblique;
+    font-family: serif;
+    border: 5px solid black;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 3px #999;
+}
+
+.button-print:hover {
+    background: #000;
+    color: #00b4d8;
+}
+
+.button-delete:hover {
+    background: #000;
+    color: #e85d04;
+}
+
+.btn {
+    display: inline-block;
+    background: #6f1d1b;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    border: 5px solid black;
+    border-radius: 50px;
+    padding: 15px 32px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 3px #999;
+}
+
+.btn:hover {
+    background: #f6aa1c;
+    color: #000;
+}
+
+#demo {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 0px;
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+ul {
+    margin: 0;
+    padding: 30px;
+}
+
+/* Style the list items */
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #fca311;
+    font-size: 18px;
+    transition: 0.2s;
+
+  /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+    background: #fca311;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+    background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+    background: #000;
+    color: #4ea8de;
+    text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/* Style the close button */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+    background-color: #457b9d;
+    color: white;
+}
+
+/* Style the header */
+.header {
+    background-color: #457b9d;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+/* Clear floats after the header */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Style the input */
+#myInput {
+    color: #000;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+    padding: 10px;
+    width: 25%;
+    background: #fca311;
+    color: #000;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.addBtn:hover {
+    background-color: #d00000;
+}
+
+#h2 {
+    margin: 5px;
+    color: #000;
+}
+
+.name {
+    font-size: 1.5em;
+    font-family: monospace;
+    text-align: right;
+    color: #000;
+}
+
+@media (max-width: 500px) {
+    body {
+        background-image: url(https://cdn.pixabay.com/photo/2015/07/11/23/02/plane-841441_1280.jpg);
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #fd9e02;
+    }
+
+    #traveling {
+        text-align: center;
+        font-size: 14px;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 55px;
+        margin-bottom: 55px;
+        font-family: serif;
+        font-style: oblique;
+    }
+
+    .WhyTravel {
+        font-size: 1.4em;
+        color: #dc2f02;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        width: 50vw;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+    }
+
+    .form-text {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.4rem;
+        margin-bottom: 0.7rem;
+        text-align: center;
+        font-size: 1.4em;
+        font-style: normal;
+        font-family: monospace;
+        color: #000;
+    }
+
+    input {
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+        padding: 14px 11px;
+        background: #000;
+        color: #e5e5e5;
+        font-size: 10px;
+        font-style: italic;
+        font-family: fantasy;
+        border: 5px solid #bc00dd;
+    }
+
+    #input_from {
+        font-size: 12px;
+        font-style: oblique;
+        font-family: cursive;
+        color: #ffffff;
+    }
+
+    #input_to {
+        font-size: 12px;
+        font-style: oblique;
+        font-family: cursive;
+        color: #9a031e;
+    }
+
+    #input_date {
+        font-size: 12px;
+        font-style: oblique;
+        font-family: cursive;
+        color: #04a6c2;
+    }
+
+    .button_submit {
+        align-items: baseline;
+        margin-top: 1.5rem;
+        width: 100px;
+        display: inline;
+        background: #000;
+        color: #ffd000;
+        font-size: 7px;
+        font-weight: bold;
+        font-style: oblique;
+        font-family: serif;
+        border: 5px solid #014f86;
+        border-radius: 50px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 3px #780116;
+    }
+
+    .button_submit:hover {
+        background: #ffd000;
+        color: #000;
+    }
+
+    .MyResults {
+        font-size: 14px;
+        font-style: normal;
+        font-family: sans-serif;
+        //display: none;
+    }
+
+    .city-text-result {
+        color: #2a3d45;
+    }
+
+    .date-text-result {
+        color: #5c4d3c;
+    }
+
+    .days-text-result {
+        color: #000;
+    }
+
+    .weather-text-result {
+        color: #d6cfcb;
+    }
+
+    .button-print, .button-delete {
+        display: inline;
+        background: #000;
+        color: #ffd000;
+        font-size: 8px;
+        font-style: oblique;
+        font-family: serif;
+        border: 5px solid #014f86;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 3px #780116;
+    }
+
+    .button-print:hover {
+        background: #b7b7a4;
+        color: #03045e;
+    }
+
+    .button-delete:hover {
+        background: #b7b7a4;
+        color: #245501;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #000;
+        color: #ffd000;
+        font-size: 8px;
+        font-weight: bold;
+        border: 5px solid #014f86;
+        border-radius: 50px;
+        padding: 15px 32px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 3px #780116;
+    }
+
+    .btn:hover {
+        background: #00f5d4;
+        color: #000;
+    }
+
+    #demo {
+        text-align: center;
+        font-size: 40px;
+        margin-top: 0px;
+    }
+
+    .name {
+        font-size: 0.5em;
+        font-family: inherit;
+        text-align: right;
+        color: #005c00;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 750px) {
+    body {
+        background-image: url(https://cdn.pixabay.com/photo/2015/07/11/23/02/plane-841441_1280.jpg);
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #4ea8de;
+    }
+
+    #traveling {
+        text-align: center;
+        font-size: 17px;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-top: 55px;
+        margin-bottom: 55px;
+        font-family: monospace;
+        font-style: italic;
+    }
+
+    .WhyTravel {
+        font-size: 2em;
+        color: #144552;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: 50vh;
+        width: 50vw;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+    }
+
+
+    .form-text {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.4rem;
+        margin-bottom: 0.7rem;
+        text-align: center;
+        font-size: 1.5em;
+        font-style: oblique;
+        font-family: sans-serif;
+        color: #5a189a;
+    }
+
+    input {
+        margin-top: 1.5rem;
+        margin-left: 1rem;
+        padding: 14px 11px;
+        background: #cd9777;
+        color: #000;
+        font-size: 12px;
+        font-style: italic;
+        font-family: fantasy;
+        border: 5px solid #5390d9;
+    }
+
+    #input_from {
+        font-size: 15px;
+        font-style: oblique;
+        font-family: cursive;
+        color: #277da1;
+    }
+
+    #input_to {
+        font-size: 15px;
+        font-style: oblique;
+        font-family: cursive;
+        color: #4a4e69;
+    }
+
+    #input_date {
+        font-size: 15px;
+        font-style: oblique;
+        font-family: cursive;
+        color: #9a031e;
+    }
+
+    .button_submit {
+        align-items: baseline;
+        margin-top: 1.5rem;
+        width: 100px;
+        display: inline;
+        background: #000;
+        color: #bb9457;
+        font-size: 10px;
+        font-weight: bold;
+        font-style: normal;
+        font-family: cursive;
+        border: 5px solid #d3d3d3;
+        border-radius: 50px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 3px #263c41;
+    }
+
+    .button_submit:hover {
+        background: #b76935;
+        color: #00a896;
+    }
+
+    .MyResults {
+        font-size: 17px;
+        font-style: italic;
+        font-family: serif;
+        //display: none;
+    }
+
+    .city-text-result {
+        color: #0b525b;
+    }
+
+    .date-text-result {
+        color: #ffe8d6;
+    }
+
+    .days-text-result {
+        color: #64dfdf;
+    }
+
+    .weather-text-result {
+        color: #9d0208;
+    }
+
+    .button-print, .button-delete {
+        display: inline;
+        background: #000;
+        color: #008000;
+        font-size: 11px;
+        font-style: normal;
+        font-family: cursive;
+        border: 5px solid #a100f2;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 50px;
+        cursor: pointer;
+        box-shadow: 0 3px #263c41;
+    }
+
+    .button-print:hover {
+        background: #4cc9f0;
+        color: #fca311;
+    }
+
+    .button-delete:hover {
+        background: #008000;
+        color: #000;
+    }
+
+    .btn {
+        display: inline-block;
+        background: #283618;
+        color: #ffffff;
+        font-size: 11px;
+        font-weight: bold;
+        border: 5px solid #ffb600;
+        border-radius: 50px;
+        padding: 15px 32px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 3px #312244;
+    }
+
+    .btn:hover {
+        background: #9a8c98;
+        color: #d00000;
+    }
+
+    #demo {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 0px;
+    }
+
+    .name {
+        font-size: 1em;
+        font-family: sans-serif;
+        text-align: right;
+        color: #4ea8de;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Travel App</title>
+    </head>
+    <body>
+        <section id="traveling">
+            <h1 class="WhyTravel">Why we need to travel?</h1>
+            <p>The journey can be long or short, but it's not important! The important is to live fully every second, every situation, live the emotions every single moment!<br> We have to travel because we need to be happy, live with carefreeness and above all we need to know the world, the traditions of a population, the places, and this, in order not to remain ignorant.<br><strong>Traveling opens the mind!!</strong></p>
+        </section>
+        <br>
+        <div class="card">
+            <section id="MyJourney">
+                <div class="the_trip">
+                    <form class="form_content" id="form" onsubmit="return Client.handleSubmit(event)">
+                        <h2 class="form-text">Plan your trip!</h2>
+                        <input type="text" id="input_from" name="from" placeholder="Departing" autocomplete="off" required>
+                        <input type="text" id="input_to" name="to" placeholder="Arriving" autocomplete="off" required>
+                        <input type="date" id="input_date" name="date" required>
+                        <button type="submit" class="button_submit" name="submit" value="Submit">Search</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+        <br>
+        <section id="results" class="result_hidden">
+            <div class="the_results">
+                <div class="result-image">
+                    <img alt="Destination" class="pixabay-image">
+                </div>
+                <div id="SectionName" class="MyResults">
+                    <h2 class="city-text-result">Destination: <span class="city"></span></h2>
+                    <h2 class="date-text-result">Departure date: <span class="date"></span></h2>
+                    <h2 class="days-text-result">Trip starts in: <span class="days"> NUM </span> days</h2>
+                    <h2 class="weather-text-result">Weather will be: <span class="weather"></span></h2>
+                    <button class="button-print" id="print" href="#">Print booking</button>
+                    <button class="button-delete" id="delete" href="#">Delete booking</button>
+                </div>
+            </div>
+        </section>
+        <p id="demo"></p>
+        <div id="myDIV" class="header">
+            <h2 id="h2">My To Do List</h2>
+            <input type="text" id="myInput" placeholder="Title...">
+            <span class="addBtn">Add</span>
+        </div>
+
+        <ul id="myUL">
+        </ul>
+        <footer>
+            <button class="btn">TOP</button>
+            <div class="name">
+                <h5>Made by Andrea Scacchi</h5>
+            </div>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body>
+</html>
