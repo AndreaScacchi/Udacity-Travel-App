@@ -63,9 +63,6 @@ function handleSubmit(event) {
 
 
 
-
-
-
 if(theInput) {
     theInput.addEventListener('click', handleSubmit);
 }
