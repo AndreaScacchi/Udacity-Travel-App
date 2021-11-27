@@ -57,6 +57,45 @@ function handleSubmit(event) {
     })
 };
 
+const getCityInfo = async (geoNameURL, arriving, geoNameUsername) => {
+    const response = await fetch(geoNameURL + arriving + "&username=" + geoNameUsername);
+    try {
+        const cityInfo = await response.json();
+        return cityInfo;
+    } catch(error) {
+        console.log("error", error);
+    }
+};
+
+const getWeather = async (latitude, longitude) => {
+    const response = await fetch(weatherBitURL + "lat=" + latitude + "&lon=" + longitude + "&key=" + weatehrBitKey);
+    try {
+        const weatherInfo = await response.json();
+        return weatherInfo;
+    } catch(error) {
+        console.error("error", error);
+    }
+};
+
+const postTravelData = async (url = '', data = {}) => {
+    const response = await fetch(url, {
+        method: "POST",
+        credentials: "same-origin",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+    });
+    
+    try {
+        const newData = await response.json();
+        console.log(newData);
+        return newData;
+    } catch(error) {
+        console.log("error", error);
+    }
+};
+
 
 
 
