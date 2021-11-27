@@ -132,8 +132,7 @@ const updateUI = async (userData) => {
     }
 };
 
-
-
+// Event listeners linked to handleSubmit function
 if(theInput) {
     theInput.addEventListener('click', handleSubmit);
 }
