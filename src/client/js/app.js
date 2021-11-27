@@ -115,9 +115,22 @@ const x = setInterval(function() {
     }
 }, 1000);
 
-
-
-
+// Update UI
+const updateUI = async (userData) => {
+    result.classList.remove('hidden');
+    form.classList.add('hidden');
+    const response = await fetch(pixaBayURL + pixaBayKey + "&q=" + userData.arriving + "+city&image_type=photo");
+    try {
+        const getImage = await response.json();
+        document.querySelector('.city').innerHTML = userData.arriving;
+        document.querySelector('.date').innerHTML = userData.travelDate;
+        document.querySelector('.days').innerHTML = userDat.daysToTravel;
+        document.querySelector('.weather').innerHTML = userData.weather;
+        document.querySelector('pixabay-image').setAttribute('src', getImage.hits[0].webformatURL);
+    } catch(error) {
+        console.log("error", error);
+    }
+};
 
 
 
