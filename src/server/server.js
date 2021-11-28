@@ -24,7 +24,7 @@ app.get('/test', async (req, res) => {
 });
 
 // POST routes
-app.post('/all', (req, res) => {
+app.post('/add', (req, res) => {
     journeyData = req.body;
     res.send(journeyData);
 });
