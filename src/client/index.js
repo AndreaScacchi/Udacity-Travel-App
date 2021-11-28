@@ -24,3 +24,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         location.reload();
     });
 });
+
+export {
+    handleSubmit,
+    getCityInfo,
+    getWeather,
+    postTravelData,
+    countDownDate,
+    updateUI
+}
