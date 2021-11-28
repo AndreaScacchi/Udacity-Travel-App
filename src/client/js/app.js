@@ -124,7 +124,7 @@ const updateUI = async (userData) => {
         const getImage = await response.json();
         document.querySelector('.city').innerHTML = userData.arriving;
         document.querySelector('.date').innerHTML = userData.travelDate;
-        document.querySelector('.days').innerHTML = userDat.daysToTravel;
+        document.querySelector('.days').innerHTML = userData.daysToTravel;
         document.querySelector('.weather').innerHTML = userData.weather;
         document.querySelector('pixabay-image').setAttribute('src', getImage.hits[0].webformatURL);
     } catch(error) {
