@@ -1,5 +1,5 @@
 const app = require("../src/server/server");
-const supertest = requre('supertest');
+const supertest = require('supertest');
 const request = supertest(app);
 
 describe("Test endpoint", function () {
