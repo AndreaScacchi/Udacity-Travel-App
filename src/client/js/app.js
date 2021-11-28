@@ -144,3 +144,12 @@ if(print) {
 if(cancel) {
     cancel.addEventListener('click', handleSubmit);
 }
+
+export {
+    handleSubmit,
+    getCityInfo,
+    getWeather,
+    postTravelData,
+    countDownDate,
+    updateUI
+}
