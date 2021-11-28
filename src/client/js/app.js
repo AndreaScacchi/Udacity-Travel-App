@@ -68,7 +68,7 @@ const getCityInfo = async (geoNameURL, arriving, geoNameUsername) => {
 };
 
 const getWeather = async (latitude, longitude) => {
-    const response = await fetch(weatherBitURL + "lat=" + latitude + "&lon=" + longitude + "&key=" + weatehrBitKey);
+    const response = await fetch(weatherBitURL + "lat=" + latitude + "&lon=" + longitude + "&key=" + weatherBitKey);
     try {
         const weatherInfo = await response.json();
         return weatherInfo;
