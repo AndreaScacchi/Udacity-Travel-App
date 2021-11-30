@@ -1,9 +1,3 @@
-/*
-###################################################
-CREATE A DOTENV --> ".env" FILE AND PUSH THE APIs KEY INTO IT
-###################################################
-*/
-
 // Geonames API and URL
 const geoNameURL = "http://api.geonames.org/searchJSON?q=";
 const geoNameUsername = "andreascacchi";
