@@ -5,16 +5,16 @@ CREATE A DOTENV --> ".env" FILE AND PUSH THE APIs KEY INTO IT
 */
 
 // Geonames API and URL
-const geoNameURL = "http://api.geonames.org/searchJSON?q=";
-const geoNameUsername = "andreascacchi";
+/*const geoNameURL = "http://api.geonames.org/searchJSON?q=";
+const geoNameUsername = "andreascacchi";*/
 
 // Weatherbit API and URL
-const weatherBitURL = "http://api.weatherbit.io/v2.0/forecast/daily?";
-const weatherBitKey = "1600fb6105a9450c851786ab67eb4437";
+/*const weatherBitURL = "http://api.weatherbit.io/v2.0/forecast/daily?";
+const weatherBitKey = "1600fb6105a9450c851786ab67eb4437";*/
 
 // Pixabay API and URL
-const pixaBayURL = "https://pixabay.com/api/?key=";
-const pixaBayKey = "19344538-371102874db6349622a031d1a";
+/*const pixaBayURL = "https://pixabay.com/api/?key=";
+const pixaBayKey = "19344538-371102874db6349622a031d1a";*/
 
 // Global variables
 const form = document.getElementById("form");
