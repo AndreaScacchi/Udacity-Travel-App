@@ -14,22 +14,22 @@ app.use(express.static("dist"));
 // Server
 const port = 3000;
 app.listen(port, () => {
-  console.log(`The server is listening on port ${port}...`);
+    console.log(`The server is listening on port ${port}...`);
 });
 
 // GET routes
 app.get("/all", (req, res) => {
-  res.sendFile("dist/index.html");
+    res.sendFile("dist/index.html");
 });
 
 app.get("/test", async (req, res) => {
-  res.json();
+    res.json();
 });
 
 // POST routes
 app.post("/add", (req, res) => {
-  journeyData = req.body;
-  res.send(journeyData);
+    journeyData = req.body;
+    res.send(journeyData);
 });
 
 module.exports = app;
