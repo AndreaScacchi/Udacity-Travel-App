@@ -1,6 +1,3 @@
-const dotenv = require("dotenv");
-dotenv.config();
-
 let journeyData = {};
 
 const express = require("express");
