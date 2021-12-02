@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,300&display=swap');
 
 // Variables
-$color-1: #cc8706;
+$color-1: #00c3ff;
 $color-2: #000000;
 $color-3: #ffffff;
 $color-4: #440505;
@@ -35,6 +35,8 @@ body {
     p {
         color: $color-2;
         font-family: $font-1;
+        text-align: center;
+        font-size: 0.9em;
     }
 }
 
