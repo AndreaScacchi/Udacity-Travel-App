@@ -10,10 +10,19 @@ $font-1: "IBM Plex Serif", sans-serif;
 $font-2: "Lora", sans-serif;
 $border: 1px solid $color-2;
 $box-shadow: 0 3px #999;
+$border-radius: 50px;
 
 @mixin formStyle($theme: $color-3) {
     background: $theme;
     color: $color-4;
+}
+
+@mixin resultStyle($resultColor: $color-2) {
+    color: $resultColor;
+}
+
+@mixin resultStyle-2($resultColor: $color-4) {
+    color: $resultColor;
 }
 
 ::selection {
@@ -96,7 +105,7 @@ body {
         font-weight: bold;
         font-family: $font-1;
         border: $border;
-        border-radius: 50px;
+        border-radius: $border-radius;
         align-items: baseline;
         text-align: center;
         cursor: pointer;
@@ -105,6 +114,43 @@ body {
     .button_submit:hover {
         background: transparent;
         box-shadow: none;
+    }
+}
+
+.MyResults {
+    font-size: 1em;
+    font-family: $font-2;
+    //display: none;
+    h2 {
+        @include resultStyle;
+    }
+    span {
+        @include resultStyle-2;
+        font-family: $font-1;
+    }
+    .button-print {
+        display: inline;
+        background: $color-3;
+        color: $color-2;
+        font-size: 0.8em;
+        font-family: $font-1;
+        border: $border;
+        font-weight: bold;
+        border-radius: $border-radius;
+        cursor: pointer;
+        box-shadow: $box-shadow;
+    }
+    .button-delete {
+        display: inline;
+        background: $color-3;
+        color: $color-2;
+        font-size: 0.8em;
+        font-family: $font-1;
+        border: $border;
+        font-weight: bold;
+        border-radius: $border-radius;
+        cursor: pointer;
+        box-shadow: $box-shadow;
     }
 }
 
