@@ -1,5 +1,5 @@
 // Google fonts
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,300&family=Lora&display=swap');
 
 // Variables
 $color-1: #00c3ff;
@@ -7,6 +7,16 @@ $color-2: #000000;
 $color-3: #ffffff;
 $color-4: #440505;
 $font-1: "IBM Plex Serif", sans-serif;
+$font-2: "Lora", sans-serif;
+
+::selection {
+    background: $color-4;
+    color: $color-3;
+}
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     //background: #e9e6e1;
