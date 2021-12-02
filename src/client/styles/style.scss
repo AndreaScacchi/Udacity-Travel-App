@@ -8,6 +8,12 @@ $color-3: #ffffff;
 $color-4: #440505;
 $font-1: "IBM Plex Serif", sans-serif;
 $font-2: "Lora", sans-serif;
+$border: 1px solid $color-2;
+
+@mixin formStyle($theme: $color-3) {
+    background: $theme;
+    color: $color-2;
+}
 
 ::selection {
     background: $color-4;
@@ -52,9 +58,54 @@ body {
     margin: auto;
     text-align: center;
     align-items: center;
+    .form-text {
+        display: flex;
+        flex-direction: column;
+        /*margin-top: 0.4rem;
+        margin-bottom: 0.7rem;*/
+        text-align: center;
+        font-size: 2em;
+        font-family: $font-1;
+        color: $color-1;
+    }
+    input {
+        @include formStyle;
+    }
+    #input_from {
+        font-size: 20px;
+        font-family: $font-1;
+        border: $border;
+    }
+    #input_to {
+        font-size: 20px;
+        font-family: $font-1;
+        border: $border;
+    }
+    #input_date {
+        font-size: 20px;
+        font-family: $font-1;
+        border: $border;
+    }
+    .button_submit {
+        @include formStyle;
+        display: inline;
+        /*background: #ffffff;
+        color: #000;*/
+        font-size: 14px;
+        margin-top: 1.5rem;
+        width: 100px;
+        font-weight: bold;
+        font-family: $font-1;
+        border: $border;
+        border-radius: 50px;
+        align-items: baseline;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 3px #999;
+    }
 }
 
-.form-text {
+/*.form-text {
     display: flex;
     flex-direction: column;
     margin-top: 0.4rem;
@@ -120,7 +171,7 @@ input {
 .button_submit:hover {
     background: #d00000;
     color: #000;
-}
+}*/
 
 .MyResults {
     font-size: 22px;
