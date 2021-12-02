@@ -29,16 +29,9 @@ body {
 }
 
 #traveling {
-    text-align: center;
-    font-size: 22px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 55px;
-    margin-bottom: 55px;
-    font-family: cursive;
-    font-style: italic;
     h1 {
-        font-size: 3em;
+        font-size: 4em;
+        text-align: center;
         color: $color-1;
         font-family: $font-1;
     }
@@ -46,7 +39,8 @@ body {
         color: $color-2;
         font-family: $font-1;
         text-align: center;
-        font-size: 0.9em;
+        font-size: 1.1em;
+        margin: 3em 0 3em 0;
     }
 }
 
