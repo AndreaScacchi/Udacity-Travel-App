@@ -9,6 +9,7 @@ $color-4: #440505;
 $font-1: "IBM Plex Serif", sans-serif;
 $font-2: "Lora", sans-serif;
 $border: 1px solid $color-2;
+$box-shadow: 0 3px #999;
 
 @mixin formStyle($theme: $color-3) {
     background: $theme;
@@ -70,21 +71,19 @@ body {
     }
     input {
         @include formStyle;
+        border: $border;
     }
     #input_from {
         font-size: 20px;
         font-family: $font-1;
-        border: $border;
     }
     #input_to {
         font-size: 20px;
         font-family: $font-1;
-        border: $border;
     }
     #input_date {
         font-size: 20px;
         font-family: $font-1;
-        border: $border;
     }
     .button_submit {
         @include formStyle;
@@ -101,7 +100,7 @@ body {
         align-items: baseline;
         text-align: center;
         cursor: pointer;
-        box-shadow: 0 3px #999;
+        box-shadow: $box-shadow;
     }
 }
 
