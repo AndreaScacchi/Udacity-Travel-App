@@ -71,8 +71,6 @@ body {
     .form-text {
         display: flex;
         flex-direction: column;
-        /*margin-top: 0.4rem;
-        margin-bottom: 0.7rem;*/
         text-align: center;
         font-size: 2em;
         font-family: $font-1;
@@ -97,8 +95,6 @@ body {
     .button_submit {
         @include formStyle;
         display: inline;
-        /*background: #ffffff;
-        color: #000;*/
         font-size: 14px;
         margin-top: 1.5rem;
         width: 100px;
