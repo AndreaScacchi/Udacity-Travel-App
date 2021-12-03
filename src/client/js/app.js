@@ -164,6 +164,7 @@ const updateUI = async (userData) => {
     }
 };
 
+// Animation to h1 element
 // Wrap every letter in a span
 var textWrapper = document.querySelector('.ml3');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
