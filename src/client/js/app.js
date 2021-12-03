@@ -141,8 +141,8 @@ const x = setInterval(function () {
 
 // Update UI
 const updateUI = async (userData) => {
-    /*result.classList.remove("hidden");
-    form.classList.add("hidden");*/
+    result.style.display = "block";
+    form.style.display = "none";
     const response = await fetch(
         pixaBayURL +
         pixaBayKey +
