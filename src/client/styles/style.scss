@@ -1,5 +1,5 @@
 // Google fonts
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,300&family=Lora&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,300&family=Lora&display=swap");
 
 // Variables
 $color-1: #00c3ff;
@@ -13,54 +13,198 @@ $box-shadow: 0 3px #999;
 $border-radius: 50px;
 
 @mixin formStyle($theme: $color-3) {
-    background: $theme;
-    color: $color-4;
+  background: $theme;
+  color: $color-4;
 }
 
 @mixin resultStyle($resultColor: $color-2) {
-    color: $resultColor;
+  color: $resultColor;
 }
 
 @mixin resultStyle-2($resultColor: $color-4) {
-    color: $resultColor;
+  color: $resultColor;
 }
 
 ::selection {
-    background: $color-4;
-    color: $color-3;
+  background: $color-4;
+  color: $color-3;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    //background: #e9e6e1;
-    background-image: url(https://images.pexels.com/photos/1655985/pexels-photo-1655985.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
-    //color: $color-2;
+  //background: #e9e6e1;
+  background-image: url(https://images.pexels.com/photos/1655985/pexels-photo-1655985.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  //color: $color-2;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#traveling {
+  h1 {
+    font-size: 4em;
+    text-align: center;
+    color: $color-1;
+    font-family: $font-1;
+  }
+  p {
+    color: $color-2;
+    font-family: $font-1;
+    text-align: center;
+    font-size: 1.1em;
+    margin: 3em 0 3em 0;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 50vw;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2em;
+    font-family: $font-1;
+    color: $color-4;
+  }
+  input {
+    @include formStyle;
+    border: $border;
+  }
+  #input_from {
+    font-size: 20px;
+    font-family: $font-1;
+  }
+  #input_to {
+    font-size: 20px;
+    font-family: $font-1;
+  }
+  #input_date {
+    font-size: 20px;
+    font-family: $font-1;
+  }
+  .button_submit {
+    @include formStyle($theme: $color-4);
+    color: $color-1;
+    display: inline;
+    font-size: 14px;
+    margin-top: 1.5rem;
+    width: 100px;
+    font-weight: bold;
+    font-family: $font-1;
+    border: $border;
+    border-radius: $border-radius;
+    align-items: baseline;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+  }
+  .button_submit:hover {
+    background: transparent;
+    color: $color-4;
+    box-shadow: none;
+  }
+}
+
+#results {
+  display: none;
+  .MyResults {
+    font-size: 1em;
+    font-family: $font-2;
+    //display: none;
+    h2 {
+      @include resultStyle;
+    }
+    span {
+      @include resultStyle-2;
+      font-family: $font-1;
+    }
+    .button-print {
+      display: inline;
+      background: $color-1;
+      color: $color-2;
+      font-size: 0.8em;
+      font-family: $font-1;
+      border: $border;
+      font-weight: bold;
+      border-radius: $border-radius;
+      cursor: pointer;
+      box-shadow: $box-shadow;
+    }
+    .button-delete {
+      display: inline;
+      background: $color-1;
+      color: $color-2;
+      font-size: 0.8em;
+      font-family: $font-1;
+      border: $border;
+      font-weight: bold;
+      border-radius: $border-radius;
+      cursor: pointer;
+      box-shadow: $box-shadow;
+    }
+    .button-print:hover {
+      background: transparent;
+      color: $color-3;
+      box-shadow: none;
+    }
+    .button-delete:hover {
+      background: transparent;
+      color: $color-3;
+      box-shadow: none;
+    }
+  }
+}
+
+#demo {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+
+.name {
+  font-size: 1.4em;
+  font-family: $font-2;
+  text-align: center;
+  color: $color-2;
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: url(https://cdn.pixabay.com/photo/2015/07/11/23/02/plane-841441_1280.jpg);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+    color: #fd9e02;
+  }
 
-#traveling {
-    h1 {
-        font-size: 4em;
-        text-align: center;
-        color: $color-1;
-        font-family: $font-1;
-    }
-    p {
-        color: $color-2;
-        font-family: $font-1;
-        text-align: center;
-        font-size: 1.1em;
-        margin: 3em 0 3em 0;
-    }
-}
+  #traveling {
+    text-align: center;
+    font-size: 14px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    font-family: serif;
+    font-style: oblique;
+  }
 
-.card {
+  .WhyTravel {
+    font-size: 1.4em;
+    color: #dc2f02;
+  }
+
+  .card {
     display: flex;
     flex-direction: column;
     height: 50vh;
@@ -68,442 +212,302 @@ body {
     margin: auto;
     text-align: center;
     align-items: center;
-    .form-text {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        font-size: 2em;
-        font-family: $font-1;
-        color: $color-4;
-    }
-    input {
-        @include formStyle;
-        border: $border;
-    }
-    #input_from {
-        font-size: 20px;
-        font-family: $font-1;
-    }
-    #input_to {
-        font-size: 20px;
-        font-family: $font-1;
-    }
-    #input_date {
-        font-size: 20px;
-        font-family: $font-1;
-    }
-    .button_submit {
-        @include formStyle($theme: $color-4);
-        color: $color-1;
-        display: inline;
-        font-size: 14px;
-        margin-top: 1.5rem;
-        width: 100px;
-        font-weight: bold;
-        font-family: $font-1;
-        border: $border;
-        border-radius: $border-radius;
-        align-items: baseline;
-        text-align: center;
-        cursor: pointer;
-        box-shadow: $box-shadow;
-    }
-    .button_submit:hover {
-        background: transparent;
-        color: $color-4;
-        box-shadow: none;
-    }
-}
+  }
 
-.MyResults {
-    font-size: 1em;
-    font-family: $font-2;
-    //display: none;
-    h2 {
-        @include resultStyle;
-    }
-    span {
-        @include resultStyle-2;
-        font-family: $font-1;
-    }
-    .button-print {
-        display: inline;
-        background: $color-1;
-        color: $color-2;
-        font-size: 0.8em;
-        font-family: $font-1;
-        border: $border;
-        font-weight: bold;
-        border-radius: $border-radius;
-        cursor: pointer;
-        box-shadow: $box-shadow;
-    }
-    .button-delete {
-        display: inline;
-        background: $color-1;
-        color: $color-2;
-        font-size: 0.8em;
-        font-family: $font-1;
-        border: $border;
-        font-weight: bold;
-        border-radius: $border-radius;
-        cursor: pointer;
-        box-shadow: $box-shadow;
-    }
-    .button-print:hover {
-        background: transparent;
-        color: $color-3;
-        box-shadow: none;
-    }
-    .button-delete:hover {
-        background: transparent;
-        color: $color-3;
-        box-shadow: none;
-    }
-}
-
-#demo {
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4rem;
+    margin-bottom: 0.7rem;
     text-align: center;
-    font-size: 60px;
-    margin-top: 0px;
-}
-
-.name {
     font-size: 1.4em;
-    font-family: $font-2;
+    font-style: normal;
+    font-family: monospace;
+    color: #000;
+  }
+
+  input {
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    padding: 14px 11px;
+    background: #000;
+    color: #e5e5e5;
+    font-size: 10px;
+    font-style: italic;
+    font-family: fantasy;
+    border: 5px solid #bc00dd;
+  }
+
+  #input_from {
+    font-size: 12px;
+    font-style: oblique;
+    font-family: cursive;
+    color: #ffffff;
+  }
+
+  #input_to {
+    font-size: 12px;
+    font-style: oblique;
+    font-family: cursive;
+    color: #9a031e;
+  }
+
+  #input_date {
+    font-size: 12px;
+    font-style: oblique;
+    font-family: cursive;
+    color: #04a6c2;
+  }
+
+  .button_submit {
+    align-items: baseline;
+    margin-top: 1.5rem;
+    width: 100px;
+    display: inline;
+    background: #000;
+    color: #ffd000;
+    font-size: 7px;
+    font-weight: bold;
+    font-style: oblique;
+    font-family: serif;
+    border: 5px solid #014f86;
+    border-radius: 50px;
     text-align: center;
-    color: $color-2;
-}
+    cursor: pointer;
+    box-shadow: 0 3px #780116;
+  }
 
-@media (max-width: 500px) {
-    body {
-        background-image: url(https://cdn.pixabay.com/photo/2015/07/11/23/02/plane-841441_1280.jpg);
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: #fd9e02;
-    }
+  .button_submit:hover {
+    background: #ffd000;
+    color: #000;
+  }
 
-    #traveling {
-        text-align: center;
-        font-size: 14px;
-        margin-left: 100px;
-        margin-right: 100px;
-        margin-top: 55px;
-        margin-bottom: 55px;
-        font-family: serif;
-        font-style: oblique;
-    }
+  .MyResults {
+    font-size: 14px;
+    font-style: normal;
+    font-family: sans-serif;
+    //display: none;
+  }
 
-    .WhyTravel {
-        font-size: 1.4em;
-        color: #dc2f02;
-    }
+  .city-text-result {
+    color: #2a3d45;
+  }
 
-    .card {
-        display: flex;
-        flex-direction: column;
-        height: 50vh;
-        width: 50vw;
-        margin: auto;
-        text-align: center;
-        align-items: center;
-    }
+  .date-text-result {
+    color: #5c4d3c;
+  }
 
-    .form-text {
-        display: flex;
-        flex-direction: column;
-        margin-top: 0.4rem;
-        margin-bottom: 0.7rem;
-        text-align: center;
-        font-size: 1.4em;
-        font-style: normal;
-        font-family: monospace;
-        color: #000;
-    }
+  .days-text-result {
+    color: #000;
+  }
 
-    input {
-        margin-top: 1.5rem;
-        margin-left: 1rem;
-        padding: 14px 11px;
-        background: #000;
-        color: #e5e5e5;
-        font-size: 10px;
-        font-style: italic;
-        font-family: fantasy;
-        border: 5px solid #bc00dd;
-    }
+  .weather-text-result {
+    color: #d6cfcb;
+  }
 
-    #input_from {
-        font-size: 12px;
-        font-style: oblique;
-        font-family: cursive;
-        color: #ffffff;
-    }
+  .button-print,
+  .button-delete {
+    display: inline;
+    background: #000;
+    color: #ffd000;
+    font-size: 8px;
+    font-style: oblique;
+    font-family: serif;
+    border: 5px solid #014f86;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 3px #780116;
+  }
 
-    #input_to {
-        font-size: 12px;
-        font-style: oblique;
-        font-family: cursive;
-        color: #9a031e;
-    }
+  .button-print:hover {
+    background: #b7b7a4;
+    color: #03045e;
+  }
 
-    #input_date {
-        font-size: 12px;
-        font-style: oblique;
-        font-family: cursive;
-        color: #04a6c2;
-    }
+  .button-delete:hover {
+    background: #b7b7a4;
+    color: #245501;
+  }
 
-    .button_submit {
-        align-items: baseline;
-        margin-top: 1.5rem;
-        width: 100px;
-        display: inline;
-        background: #000;
-        color: #ffd000;
-        font-size: 7px;
-        font-weight: bold;
-        font-style: oblique;
-        font-family: serif;
-        border: 5px solid #014f86;
-        border-radius: 50px;
-        text-align: center;
-        cursor: pointer;
-        box-shadow: 0 3px #780116;
-    }
+  #demo {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0px;
+  }
 
-    .button_submit:hover {
-        background: #ffd000;
-        color: #000;
-    }
-
-    .MyResults {
-        font-size: 14px;
-        font-style: normal;
-        font-family: sans-serif;
-        //display: none;
-    }
-
-    .city-text-result {
-        color: #2a3d45;
-    }
-
-    .date-text-result {
-        color: #5c4d3c;
-    }
-
-    .days-text-result {
-        color: #000;
-    }
-
-    .weather-text-result {
-        color: #d6cfcb;
-    }
-
-    .button-print, .button-delete {
-        display: inline;
-        background: #000;
-        color: #ffd000;
-        font-size: 8px;
-        font-style: oblique;
-        font-family: serif;
-        border: 5px solid #014f86;
-        font-weight: bold;
-        text-align: center;
-        border-radius: 50px;
-        cursor: pointer;
-        box-shadow: 0 3px #780116;
-    }
-
-    .button-print:hover {
-        background: #b7b7a4;
-        color: #03045e;
-    }
-
-    .button-delete:hover {
-        background: #b7b7a4;
-        color: #245501;
-    }
-
-    #demo {
-        text-align: center;
-        font-size: 40px;
-        margin-top: 0px;
-    }
-
-    .name {
-        font-size: 0.5em;
-        font-family: inherit;
-        text-align: right;
-        color: #005c00;
-    }
+  .name {
+    font-size: 0.5em;
+    font-family: inherit;
+    text-align: right;
+    color: #005c00;
+  }
 }
 
 @media (min-width: 501px) and (max-width: 750px) {
-    body {
-        background-image: url(https://cdn.pixabay.com/photo/2015/07/11/23/02/plane-841441_1280.jpg);
-        height: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: #4ea8de;
-    }
+  body {
+    background-image: url(https://cdn.pixabay.com/photo/2015/07/11/23/02/plane-841441_1280.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #4ea8de;
+  }
 
-    #traveling {
-        text-align: center;
-        font-size: 17px;
-        margin-left: 100px;
-        margin-right: 100px;
-        margin-top: 55px;
-        margin-bottom: 55px;
-        font-family: monospace;
-        font-style: italic;
-    }
+  #traveling {
+    text-align: center;
+    font-size: 17px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 55px;
+    margin-bottom: 55px;
+    font-family: monospace;
+    font-style: italic;
+  }
 
-    .WhyTravel {
-        font-size: 2em;
-        color: #144552;
-    }
+  .WhyTravel {
+    font-size: 2em;
+    color: #144552;
+  }
 
-    .card {
-        display: flex;
-        flex-direction: column;
-        height: 50vh;
-        width: 50vw;
-        margin: auto;
-        text-align: center;
-        align-items: center;
-    }
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 50vw;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+  }
 
+  .form-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.4rem;
+    margin-bottom: 0.7rem;
+    text-align: center;
+    font-size: 1.5em;
+    font-style: oblique;
+    font-family: sans-serif;
+    color: #5a189a;
+  }
 
-    .form-text {
-        display: flex;
-        flex-direction: column;
-        margin-top: 0.4rem;
-        margin-bottom: 0.7rem;
-        text-align: center;
-        font-size: 1.5em;
-        font-style: oblique;
-        font-family: sans-serif;
-        color: #5a189a;
-    }
+  input {
+    margin-top: 1.5rem;
+    margin-left: 1rem;
+    padding: 14px 11px;
+    background: #cd9777;
+    color: #000;
+    font-size: 12px;
+    font-style: italic;
+    font-family: fantasy;
+    border: 5px solid #5390d9;
+  }
 
-    input {
-        margin-top: 1.5rem;
-        margin-left: 1rem;
-        padding: 14px 11px;
-        background: #cd9777;
-        color: #000;
-        font-size: 12px;
-        font-style: italic;
-        font-family: fantasy;
-        border: 5px solid #5390d9;
-    }
+  #input_from {
+    font-size: 15px;
+    font-style: oblique;
+    font-family: cursive;
+    color: #277da1;
+  }
 
-    #input_from {
-        font-size: 15px;
-        font-style: oblique;
-        font-family: cursive;
-        color: #277da1;
-    }
+  #input_to {
+    font-size: 15px;
+    font-style: oblique;
+    font-family: cursive;
+    color: #4a4e69;
+  }
 
-    #input_to {
-        font-size: 15px;
-        font-style: oblique;
-        font-family: cursive;
-        color: #4a4e69;
-    }
+  #input_date {
+    font-size: 15px;
+    font-style: oblique;
+    font-family: cursive;
+    color: #9a031e;
+  }
 
-    #input_date {
-        font-size: 15px;
-        font-style: oblique;
-        font-family: cursive;
-        color: #9a031e;
-    }
+  .button_submit {
+    align-items: baseline;
+    margin-top: 1.5rem;
+    width: 100px;
+    display: inline;
+    background: #000;
+    color: #bb9457;
+    font-size: 10px;
+    font-weight: bold;
+    font-style: normal;
+    font-family: cursive;
+    border: 5px solid #d3d3d3;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 3px #263c41;
+  }
 
-    .button_submit {
-        align-items: baseline;
-        margin-top: 1.5rem;
-        width: 100px;
-        display: inline;
-        background: #000;
-        color: #bb9457;
-        font-size: 10px;
-        font-weight: bold;
-        font-style: normal;
-        font-family: cursive;
-        border: 5px solid #d3d3d3;
-        border-radius: 50px;
-        text-align: center;
-        cursor: pointer;
-        box-shadow: 0 3px #263c41;
-    }
+  .button_submit:hover {
+    background: #b76935;
+    color: #00a896;
+  }
 
-    .button_submit:hover {
-        background: #b76935;
-        color: #00a896;
-    }
+  .MyResults {
+    font-size: 17px;
+    font-style: italic;
+    font-family: serif;
+    //display: none;
+  }
 
-    .MyResults {
-        font-size: 17px;
-        font-style: italic;
-        font-family: serif;
-        //display: none;
-    }
+  .city-text-result {
+    color: #0b525b;
+  }
 
-    .city-text-result {
-        color: #0b525b;
-    }
+  .date-text-result {
+    color: #ffe8d6;
+  }
 
-    .date-text-result {
-        color: #ffe8d6;
-    }
+  .days-text-result {
+    color: #64dfdf;
+  }
 
-    .days-text-result {
-        color: #64dfdf;
-    }
+  .weather-text-result {
+    color: #9d0208;
+  }
 
-    .weather-text-result {
-        color: #9d0208;
-    }
+  .button-print,
+  .button-delete {
+    display: inline;
+    background: #000;
+    color: #008000;
+    font-size: 11px;
+    font-style: normal;
+    font-family: cursive;
+    border: 5px solid #a100f2;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 3px #263c41;
+  }
 
-    .button-print, .button-delete {
-        display: inline;
-        background: #000;
-        color: #008000;
-        font-size: 11px;
-        font-style: normal;
-        font-family: cursive;
-        border: 5px solid #a100f2;
-        font-weight: bold;
-        text-align: center;
-        border-radius: 50px;
-        cursor: pointer;
-        box-shadow: 0 3px #263c41;
-    }
+  .button-print:hover {
+    background: #4cc9f0;
+    color: #fca311;
+  }
 
-    .button-print:hover {
-        background: #4cc9f0;
-        color: #fca311;
-    }
+  .button-delete:hover {
+    background: #008000;
+    color: #000;
+  }
 
-    .button-delete:hover {
-        background: #008000;
-        color: #000;
-    }
+  #demo {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0px;
+  }
 
-    #demo {
-        text-align: center;
-        font-size: 20px;
-        margin-top: 0px;
-    }
-
-    .name {
-        font-size: 1em;
-        font-family: sans-serif;
-        text-align: right;
-        color: #4ea8de;
-    }
+  .name {
+    font-size: 1em;
+    font-family: sans-serif;
+    text-align: right;
+    color: #4ea8de;
+  }
 }

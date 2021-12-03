@@ -116,21 +116,25 @@ body {
           box-shadow: none;
 }
 
-.MyResults {
+#results {
+  display: none;
+}
+
+#results .MyResults {
   font-size: 1em;
   font-family: "Lora", sans-serif;
 }
 
-.MyResults h2 {
+#results .MyResults h2 {
   color: #000000;
 }
 
-.MyResults span {
+#results .MyResults span {
   color: #440505;
   font-family: "IBM Plex Serif", sans-serif;
 }
 
-.MyResults .button-print {
+#results .MyResults .button-print {
   display: inline;
   background: #00c3ff;
   color: #000000;
@@ -144,7 +148,7 @@ body {
           box-shadow: 0 3px #999;
 }
 
-.MyResults .button-delete {
+#results .MyResults .button-delete {
   display: inline;
   background: #00c3ff;
   color: #000000;
@@ -158,14 +162,14 @@ body {
           box-shadow: 0 3px #999;
 }
 
-.MyResults .button-print:hover {
+#results .MyResults .button-print:hover {
   background: transparent;
   color: #ffffff;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.MyResults .button-delete:hover {
+#results .MyResults .button-delete:hover {
   background: transparent;
   color: #ffffff;
   -webkit-box-shadow: none;
@@ -310,7 +314,8 @@ body {
   .weather-text-result {
     color: #d6cfcb;
   }
-  .button-print, .button-delete {
+  .button-print,
+  .button-delete {
     display: inline;
     background: #000;
     color: #ffd000;
@@ -471,7 +476,8 @@ body {
   .weather-text-result {
     color: #9d0208;
   }
-  .button-print, .button-delete {
+  .button-print,
+  .button-delete {
     display: inline;
     background: #000;
     color: #008000;
