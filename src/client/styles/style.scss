@@ -152,55 +152,15 @@ body {
         cursor: pointer;
         box-shadow: $box-shadow;
     }
+    .button-print:hover {
+        background: transparent;
+        box-shadow: none;
+    }
+    .button-delete:hover {
+        background: transparent;
+        box-shadow: none;
+    }
 }
-
-/*.MyResults {
-    font-size: 22px;
-    font-style: italic;
-    font-family: cursive;
-    //display: none;
-}
-
-.city-text-result {
-    color: #ffba08;
-}
-
-.date-text-result {
-    color: #00b4d8;
-}
-
-.days-text-result {
-    color: #9d0208;
-}
-
-.weather-text-result {
-    color: #70e000;
-}
-
-.button-print, .button-delete {
-    display: inline;
-    background: #ffffff;
-    color: #000;
-    font-size: 14px;
-    font-style: oblique;
-    font-family: serif;
-    border: 5px solid black;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 3px #999;
-}
-
-.button-print:hover {
-    background: #000;
-    color: #00b4d8;
-}
-
-.button-delete:hover {
-    background: #000;
-    color: #e85d04;
-}*/
 
 #demo {
     text-align: center;
