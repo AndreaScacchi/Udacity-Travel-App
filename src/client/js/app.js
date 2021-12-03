@@ -155,10 +155,8 @@ const updateUI = async (userData) => {
         document.querySelector(".city").innerHTML = userData.arriving;
         document.querySelector(".date").innerHTML = userData.travelDate;
         document.querySelector(".days").innerHTML = userData.daysToTravel;
-        document.querySelector(".weather").innerHTML = userData.weather;
-        document
-            .querySelector(".pixabay-image")
-            .setAttribute("src", getImage.hits[0].webformatURL);
+        document.querySelector(".weather").innerHTML = /*Math.round(userData.weather * 9 / 5 + 32)+ "&deg;F";*/ userData.weather;
+        document.querySelector(".pixabay-image").setAttribute("src", getImage.hits[0].webformatURL);
     } catch (error) {
         console.log("error", error);
     }

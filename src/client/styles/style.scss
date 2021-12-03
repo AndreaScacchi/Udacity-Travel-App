@@ -93,7 +93,8 @@ body {
         font-family: $font-1;
     }
     .button_submit {
-        @include formStyle;
+        @include formStyle($theme: $color-4);
+        color: $color-1;
         display: inline;
         font-size: 14px;
         margin-top: 1.5rem;
@@ -109,6 +110,7 @@ body {
     }
     .button_submit:hover {
         background: transparent;
+        color: $color-4;
         box-shadow: none;
     }
 }
@@ -126,7 +128,7 @@ body {
     }
     .button-print {
         display: inline;
-        background: $color-3;
+        background: $color-1;
         color: $color-2;
         font-size: 0.8em;
         font-family: $font-1;
@@ -138,7 +140,7 @@ body {
     }
     .button-delete {
         display: inline;
-        background: $color-3;
+        background: $color-1;
         color: $color-2;
         font-size: 0.8em;
         font-family: $font-1;
@@ -150,10 +152,12 @@ body {
     }
     .button-print:hover {
         background: transparent;
+        color: $color-3;
         box-shadow: none;
     }
     .button-delete:hover {
         background: transparent;
+        color: $color-3;
         box-shadow: none;
     }
 }

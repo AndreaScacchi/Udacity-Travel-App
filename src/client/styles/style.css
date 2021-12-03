@@ -89,8 +89,9 @@ body {
 }
 
 .card .button_submit {
-  background: #ffffff;
+  background: #440505;
   color: #440505;
+  color: #00c3ff;
   display: inline;
   font-size: 14px;
   margin-top: 1.5rem;
@@ -110,6 +111,7 @@ body {
 
 .card .button_submit:hover {
   background: transparent;
+  color: #440505;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -130,7 +132,7 @@ body {
 
 .MyResults .button-print {
   display: inline;
-  background: #ffffff;
+  background: #00c3ff;
   color: #000000;
   font-size: 0.8em;
   font-family: "IBM Plex Serif", sans-serif;
@@ -144,7 +146,7 @@ body {
 
 .MyResults .button-delete {
   display: inline;
-  background: #ffffff;
+  background: #00c3ff;
   color: #000000;
   font-size: 0.8em;
   font-family: "IBM Plex Serif", sans-serif;
@@ -158,12 +160,14 @@ body {
 
 .MyResults .button-print:hover {
   background: transparent;
+  color: #ffffff;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
 .MyResults .button-delete:hover {
   background: transparent;
+  color: #ffffff;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
