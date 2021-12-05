@@ -117,6 +117,19 @@ const postTravelData = async (url = "", data = {}) => {
     }
 };
 
+// Event listeners linked to handleSubmit function
+if (theInput) {
+    theInput.addEventListener("click", handleSubmit);
+}
+
+if (print) {
+    print.addEventListener("click", handleSubmit);
+}
+
+if (cancel) {
+    cancel.addEventListener("click", handleSubmit);
+}
+
 // Update UI
 const updateUI = async (userData) => {
     result.style.display = "block";
@@ -181,19 +194,6 @@ anime.timeline({loop: true})
         easing: "easeOutExpo",
         delay: 1000
     });
-
-// Event listeners linked to handleSubmit function
-if (theInput) {
-    theInput.addEventListener("click", handleSubmit);
-}
-
-if (print) {
-    print.addEventListener("click", handleSubmit);
-}
-
-if (cancel) {
-    cancel.addEventListener("click", handleSubmit);
-}
 
 export {
     handleSubmit,
