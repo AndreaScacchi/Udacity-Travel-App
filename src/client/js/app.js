@@ -156,7 +156,7 @@ const updateUI = async (userData) => {
 };
 
 // The countdown
-const countDownDate = new Date().getTime();
+/*const countDownDate = new Date().getTime();
 
 const x = setInterval(function () {
     const now = new Date().getTime();
@@ -175,7 +175,7 @@ const x = setInterval(function () {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "BON VOYAGE";
     }
-}, 1000);
+}, 1000);*/
 
 // Animation to h1 element
 // Wrap every letter in a span
