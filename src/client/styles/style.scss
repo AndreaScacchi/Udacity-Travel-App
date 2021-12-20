@@ -116,7 +116,7 @@ body {
 }
 
 #results {
-  //display: none;
+  display: none;
 
   .result-image {
     display: flex;
@@ -124,6 +124,9 @@ body {
   }
 
   .MyResults {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
     font-size: 1em;
     font-family: $font-2;
     //display: none;
@@ -135,7 +138,8 @@ body {
       font-family: $font-1;
     }
     .button-print {
-      display: inline;
+      //display: inline;
+      width: 20%;
       background: $color-1;
       color: $color-2;
       font-size: 0.8em;
@@ -147,7 +151,8 @@ body {
       box-shadow: $box-shadow;
     }
     .button-delete {
-      display: inline;
+      //display: inline;
+      width: 20%;
       background: $color-1;
       color: $color-2;
       font-size: 0.8em;
