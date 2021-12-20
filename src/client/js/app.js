@@ -18,7 +18,7 @@ const dateNow = Date.now() / 1000;
 const theInput = document.querySelector(".button_submit");
 const print = document.getElementById("print");
 const cancel = document.getElementById("delete");
-const countD = document-getElementById("demo");
+//const countD = document-getElementById("demo");
 
 function handleSubmit(event) {
     event.preventDefault();
@@ -157,8 +157,9 @@ const updateUI = async (userData) => {
 };
 
 // The countdown
-const countdown = () => {
-    let depDate = document.getElementById('input_date');
+let countD = document.getElementById("demo");
+const countdown = setInterval( () => {
+    let depDate = document.getElementById('input_date').value;
     let newDate = new Date(depDate);
     let day = newDate.getTime();
     let d = new Date();
@@ -172,9 +173,17 @@ const countdown = () => {
     console.log(count);
 
     if(count === -1) {
-        count
+        countD.innerHTML = 'Your trip is Today! BON VOYAGE🛫';
+    } else if(count === 0) {
+        countD.innerHTML = 'You have less than a day to your trip';
+    } else if(count === 1) {
+        countD.innerHTML = 'You have 1 full day left to your trip';
+    } else if(count > 1) {
+        countD.innerHTML = `You have ${count} days left to your trip`;
+    } else if(count < -1) {
+        alert('Cannot enter a past date');
     }
-}
+}, 1000);
 
 
 
@@ -224,6 +233,7 @@ export {
     getCityInfo,
     getWeather,
     postTravelData,
-    countDownDate,
+    //countDownDate,
+    countdown,
     updateUI,
 };
