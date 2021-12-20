@@ -18,6 +18,7 @@ const dateNow = Date.now() / 1000;
 const theInput = document.querySelector(".button_submit");
 const print = document.getElementById("print");
 const cancel = document.getElementById("delete");
+const countD = document-getElementById("demo");
 
 function handleSubmit(event) {
     event.preventDefault();
@@ -169,6 +170,10 @@ const countdown = () => {
     let count = Math.round(daysDiff);
 
     console.log(count);
+
+    if(count === -1) {
+        count
+    }
 }
 
 
