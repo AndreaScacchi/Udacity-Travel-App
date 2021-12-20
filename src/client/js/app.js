@@ -157,7 +157,7 @@ const updateUI = async (userData) => {
 };
 
 // The countdown
-let countD = document.getElementById("demo");
+const countD = document.getElementById("demo");
 const countdown = setInterval( () => {
     let depDate = document.getElementById('input_date').value;
     let newDate = new Date(depDate);
@@ -181,7 +181,7 @@ const countdown = setInterval( () => {
     } else if(count > 1) {
         countD.innerHTML = `You have ${count} days left to your trip`;
     } else if(count < -1) {
-        alert('Cannot enter a past date');
+        countD.innerHTML = 'You lost your flight';
     }
 }, 1000);
 
