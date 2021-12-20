@@ -156,6 +156,23 @@ const updateUI = async (userData) => {
 };
 
 // The countdown
+const countdown = () => {
+    let depDate = document.getElementById('input_date');
+    let newDate = new Date(depDate);
+    let day = newDate.getTime();
+    let d = new Date();
+    let today = d.getTime();
+
+    // time difference
+    let timeDiff = day - today;
+    let daysDiff = timeDiff / (1000 * 3600 * 24);
+    let count = Math.round(daysDiff);
+
+    console.log(count);
+}
+
+
+
 /*const countDownDate = new Date().getTime();
 
 const x = setInterval(function () {
