@@ -132,29 +132,6 @@ if (cancel) {
     cancel.addEventListener("click", handleSubmit);
 }
 
-// Update UI
-const updateUI = async (userData) => {
-    result.style.display = "block";
-    //form.style.display = "none";
-    card.style.display = "none";
-    const response = await fetch(
-        pixaBayURL +
-        pixaBayKey +
-        "&q=" +
-        userData.arriving +
-        "+city&image_type=photo"
-    );
-    try {
-        const getImage = await response.json();
-        document.querySelector(".city").innerHTML = userData.arriving;
-        document.querySelector(".date").innerHTML = userData.travelDate;
-        document.querySelector(".days").innerHTML = userData.daysToTravel;
-        document.querySelector(".weather").innerHTML = /*Math.round(userData.weather * 9 / 5 + 32)+ "&deg;F";*/ userData.weather;
-        document.querySelector(".pixabay-image").setAttribute("src", getImage.hits[0].webformatURL);
-    } catch (error) {
-        console.log("error", error);
-    }
-};
 
 // The countdown
 const countD = document.getElementById("demo");
@@ -186,27 +163,31 @@ const countdown = setInterval( () => {
 }, 1000);
 
 
-
-/*const countDownDate = new Date().getTime();
-
-const x = setInterval(function () {
-    const now = new Date().getTime();
-    const distance = countDownDate - now;
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+// Update UI
+const updateUI = async (userData) => {
+    result.style.display = "block";
+    countD.style.display = "block";
+    //form.style.display = "none";
+    card.style.display = "none";
+    const response = await fetch(
+        pixaBayURL +
+        pixaBayKey +
+        "&q=" +
+        userData.arriving +
+        "+city&image_type=photo"
     );
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("demo").innerHTML =
-        days + "d" + hours + "h" + minutes + "m" + seconds + "s";
-
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "BON VOYAGE";
+    try {
+        const getImage = await response.json();
+        document.querySelector(".city").innerHTML = userData.arriving;
+        document.querySelector(".date").innerHTML = userData.travelDate;
+        document.querySelector(".days").innerHTML = userData.daysToTravel;
+        document.querySelector(".weather").innerHTML = /*Math.round(userData.weather * 9 / 5 + 32)+ "&deg;F";*/ userData.weather;
+        document.querySelector(".pixabay-image").setAttribute("src", getImage.hits[0].webformatURL);
+    } catch (error) {
+        console.log("error", error);
     }
-}, 1000);*/
+};
+
 
 // Animation to h1 element
 // Wrap every letter in a span
