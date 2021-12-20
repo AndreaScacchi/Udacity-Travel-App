@@ -147,7 +147,7 @@ const countdown = setInterval( () => {
     let daysDiff = timeDiff / (1000 * 3600 * 24);
     let count = Math.round(daysDiff);
 
-    console.log(count);
+    console.log(typeof count);
 
     if(count === -1) {
         countD.innerHTML = 'Your trip is Today! BON VOYAGE🛫';
