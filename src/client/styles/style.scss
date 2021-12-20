@@ -116,7 +116,12 @@ body {
 }
 
 #results {
-  display: none;
+  //display: none;
+
+  .result-image {
+    display: flex;
+    justify-content: center;
+  }
 
   .MyResults {
     font-size: 1em;

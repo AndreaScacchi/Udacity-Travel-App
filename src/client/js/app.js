@@ -11,6 +11,7 @@ const pixaBayURL = "https://pixabay.com/api/?key=";
 const pixaBayKey = "19344538-371102874db6349622a031d1a";
 
 // Global variables
+const card = document.querySelector('.card');
 const form = document.getElementById("form");
 const result = document.getElementById("results");
 const dateNow = Date.now() / 1000;
@@ -133,7 +134,8 @@ if (cancel) {
 // Update UI
 const updateUI = async (userData) => {
     result.style.display = "block";
-    form.style.display = "none";
+    //form.style.display = "none";
+    card.style.display = "none";
     const response = await fetch(
         pixaBayURL +
         pixaBayKey +
