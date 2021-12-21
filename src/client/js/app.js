@@ -210,6 +210,8 @@ anime.timeline({loop: true})
         delay: 1000
     });
 
+// set the date to footer
+
 // export functions
 export {
     handleSubmit,
