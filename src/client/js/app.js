@@ -211,6 +211,7 @@ anime.timeline({loop: true})
     });
 
 // set the date to footer
+date.innerHTML = new Date().getFullYear();
 
 // export functions
 export {
