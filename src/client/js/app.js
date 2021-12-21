@@ -214,7 +214,6 @@ export {
     getCityInfo,
     getWeather,
     postTravelData,
-    //countDownDate,
     countdown,
     updateUI,
 };
