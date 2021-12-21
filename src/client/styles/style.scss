@@ -126,13 +126,13 @@ body {
   .MyResults {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 4em;
     place-items: center;
     font-size: 1em;
     font-family: $font-2;
     //display: none;
     h2 {
       @include resultStyle;
-      margin-top: 1em;
     }
     span {
       @include resultStyle-2;
