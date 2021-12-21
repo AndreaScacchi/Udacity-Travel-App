@@ -209,6 +209,7 @@ anime.timeline({loop: true})
         delay: 1000
     });
 
+// export functions
 export {
     handleSubmit,
     getCityInfo,
