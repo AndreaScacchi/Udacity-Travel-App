@@ -18,6 +18,7 @@ const dateNow = Date.now() / 1000;
 const theInput = document.querySelector(".button_submit");
 const print = document.getElementById("print");
 const cancel = document.getElementById("delete");
+const date = document.getElementById("date");
 
 
 function handleSubmit(event) {
