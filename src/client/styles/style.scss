@@ -132,6 +132,7 @@ body {
     //display: none;
     h2 {
       @include resultStyle;
+      margin-top: 1em;
     }
     span {
       @include resultStyle-2;
