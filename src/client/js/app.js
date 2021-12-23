@@ -135,7 +135,7 @@ if (cancel) {
 
 
 // The countdown
-const countD = document.getElementById("demo");
+const countD = document.getElementById("countdown");
 const countdown = setInterval( () => {
     let depDate = document.getElementById('input_date').value;
     let newDate = new Date(depDate);
