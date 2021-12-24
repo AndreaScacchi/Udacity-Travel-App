@@ -10,7 +10,7 @@ import "./styles/style.scss";
 document.addEventListener('DOMContentLoaded', (event) => {
     event.preventDefault();
 
-    const print = document.getElementById('print');
+    const printTrip = document.getElementById('print');
     const cancel = document.getElementById('delete');
 
     print.addEventListener('click', () => {
