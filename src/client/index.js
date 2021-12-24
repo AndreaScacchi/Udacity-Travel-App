@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         location.reload();
     });
 
-    cancel.addEventListener('click', () => {
+    cancelTrip.addEventListener('click', () => {
         form.reset();
         results.classList.add('hidden');
         location.reload();
