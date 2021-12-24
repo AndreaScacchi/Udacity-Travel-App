@@ -120,7 +120,7 @@ const postTravelData = async (url = "", data = {}) => {
 };
 
 // Event listeners linked to handleSubmit function
-if (theInput) {
+if (searchTrip) {
     theInput.addEventListener("click", handleSubmit);
 }
 
