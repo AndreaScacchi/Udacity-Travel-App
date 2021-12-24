@@ -128,7 +128,7 @@ if (printTrip) {
     printTrip.addEventListener("click", handleSubmit);
 }
 
-if (cancel) {
+if (cancelTrip) {
     cancel.addEventListener("click", handleSubmit);
 }
 
