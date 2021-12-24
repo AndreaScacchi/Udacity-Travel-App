@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const printTrip = document.getElementById('print');
     const cancel = document.getElementById('delete');
 
-    print.addEventListener('click', () => {
+    printTrip.addEventListener('click', () => {
         window.print();
         location.reload();
     });
