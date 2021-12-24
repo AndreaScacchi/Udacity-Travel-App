@@ -124,7 +124,7 @@ if (searchTrip) {
     searchTrip.addEventListener("click", handleSubmit);
 }
 
-if (print) {
+if (printTrip) {
     print.addEventListener("click", handleSubmit);
 }
 
