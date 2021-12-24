@@ -159,7 +159,7 @@ const countdown = setInterval( () => {
     } else if(count > 1) {
         countdown.innerHTML = `You have ${count} days left to your trip`;
     } else if(count < -1) {
-        countD.innerHTML = 'You lost your flight';
+        countdown.innerHTML = 'You lost your flight';
     }
 }, 1000);
 
