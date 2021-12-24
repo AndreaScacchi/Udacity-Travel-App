@@ -121,7 +121,7 @@ const postTravelData = async (url = "", data = {}) => {
 
 // Event listeners linked to handleSubmit function
 if (searchTrip) {
-    theInput.addEventListener("click", handleSubmit);
+    searchTrip.addEventListener("click", handleSubmit);
 }
 
 if (print) {
