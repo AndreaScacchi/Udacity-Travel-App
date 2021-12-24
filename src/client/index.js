@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     event.preventDefault();
 
     const printTrip = document.getElementById('print');
-    const cancel = document.getElementById('delete');
+    const cancelTrip = document.getElementById('delete');
 
     printTrip.addEventListener('click', () => {
         window.print();
