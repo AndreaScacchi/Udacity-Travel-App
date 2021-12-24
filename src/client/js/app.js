@@ -167,7 +167,6 @@ const countdown = setInterval( () => {
 const updateUI = async (userData) => {
     result.style.display = "block";
     countD.style.display = "block";
-    //form.style.display = "none";
     card.style.display = "none";
     const response = await fetch(
         pixaBayURL +
