@@ -12,6 +12,7 @@ const pixaBayKey = "19344538-371102874db6349622a031d1a";
 
 // Global variables
 const card = document.querySelector('.card');
+const form = document.getElementById('form');
 const result = document.getElementById("results");
 const dateNow = Date.now() / 1000;
 const searchTrip = document.querySelector(".button_submit");
