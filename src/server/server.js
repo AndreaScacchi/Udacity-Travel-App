@@ -1,4 +1,4 @@
-let journeyData = {};
+let tripData = {};
 
 const express = require("express");
 const cors = require("cors");
