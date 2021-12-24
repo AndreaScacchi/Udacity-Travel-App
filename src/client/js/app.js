@@ -218,6 +218,6 @@ export {
     getCityInfo,
     getWeather,
     postTravelData,
-    countdown,
+    countdownDate,
     updateUI,
 };
