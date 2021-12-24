@@ -153,13 +153,13 @@ const countdownDate = setInterval( () => {
     if(count === -1) {
         countdown.innerHTML = 'Your trip is Today! BON VOYAGE🛫';
     } else if(count === 0) {
-        countdown.innerHTML = 'You have less than a day to your trip';
+        countdown.innerHTML = 'You have less than a day! Are you ready?💪';
     } else if(count === 1) {
-        countdown.innerHTML = 'You have 1 full day left to your trip';
+        countdown.innerHTML = 'You have 1 full day left to your trip❕';
     } else if(count > 1) {
-        countdown.innerHTML = `You have ${count} days left to your trip`;
+        countdown.innerHTML = `You have ${count} days left to your trip🧳`;
     } else if(count < -1) {
-        countdown.innerHTML = 'You lost your flight';
+        countdown.innerHTML = 'You lost your flight😔';
     }
 }, 1000);
 
