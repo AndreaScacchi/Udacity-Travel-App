@@ -125,7 +125,7 @@ if (searchTrip) {
 }
 
 if (printTrip) {
-    print.addEventListener("click", handleSubmit);
+    printTrip.addEventListener("click", handleSubmit);
 }
 
 if (cancel) {
