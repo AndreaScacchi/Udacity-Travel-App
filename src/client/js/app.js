@@ -135,7 +135,7 @@ if (cancelTrip) {
 
 
 // The countdown
-const countD = document.getElementById("countdown");
+const countdown = document.getElementById("countdown");
 const countdown = setInterval( () => {
     let depDate = document.getElementById('input_date').value;
     let newDate = new Date(depDate);
