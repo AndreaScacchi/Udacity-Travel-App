@@ -153,7 +153,7 @@ const countdown = setInterval( () => {
     if(count === -1) {
         countdown.innerHTML = 'Your trip is Today! BON VOYAGE🛫';
     } else if(count === 0) {
-        countD.innerHTML = 'You have less than a day to your trip';
+        countdown.innerHTML = 'You have less than a day to your trip';
     } else if(count === 1) {
         countD.innerHTML = 'You have 1 full day left to your trip';
     } else if(count > 1) {
