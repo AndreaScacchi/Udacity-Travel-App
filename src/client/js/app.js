@@ -15,7 +15,7 @@ const card = document.querySelector('.card');
 const result = document.getElementById("results");
 const dateNow = Date.now() / 1000;
 const searchTrip = document.querySelector(".button_submit");
-const print = document.getElementById("print");
+const printTrip = document.getElementById("print");
 const cancel = document.getElementById("delete");
 const date = document.getElementById("date");
 
