@@ -25,7 +25,7 @@ app.get("/test", async (req, res) => {
 
 // POST routes
 app.post("/add", (req, res) => {
-    journeyData = req.body;
+    tripData = req.body;
     res.send(journeyData);
 });
 
