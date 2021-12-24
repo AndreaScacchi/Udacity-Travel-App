@@ -155,7 +155,7 @@ const countdown = setInterval( () => {
     } else if(count === 0) {
         countdown.innerHTML = 'You have less than a day to your trip';
     } else if(count === 1) {
-        countD.innerHTML = 'You have 1 full day left to your trip';
+        countdown.innerHTML = 'You have 1 full day left to your trip';
     } else if(count > 1) {
         countD.innerHTML = `You have ${count} days left to your trip`;
     } else if(count < -1) {
